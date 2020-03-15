@@ -1,0 +1,43 @@
+body {
+    background: url("https://cdn.dribbble.com/users/651763/screenshots/4687856/burgerpattern.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Fjalla One', sans-serif;
+    color: gainsboro;
+    text-shadow: 2px 2px purple;
+    font-size: 2rem;
+}
+
+header h1 {
+    font-size: 5rem;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    width: max-content;
+    margin: auto;
+    color: white;
+}
+
+.notDevoured li:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
+.devoured li {
+    color: gray;
+}
+
+input,
+button {
+    border-radius: 0.3rem;
+}

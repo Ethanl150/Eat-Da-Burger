@@ -1,0 +1,36 @@
+<header class="text-center my-5 mx-5">
+        <h1>Eat-Da-Burger!</h1>
+    </header>
+    <div class="row container-fluid wrapper">
+        <div class="left-side col-sm-6 text-center">
+            <h1>Eat it!</h1>
+            <br>
+            <ul class="notDevoured">
+                {{#each burger}}
+                {{#unless devoured}}
+                <li data-id={{this.id}}>{{this.burger_name}}</li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="right-side col-sm-6 text-center">
+            <h1>Devoured!</h1>
+            <br>
+            <ul class="devoured">
+               {{#each burger}}
+                {{#if devoured}}
+                <li>{{this.burger_name}}</li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <form id="addBurger" class="my-5">
+        <div class="form-group d-flex flex-direction-row justify-content-center">
+            <label for="burgerInput">Add a burger!</label>
+            <input type="text" class="ml-1" name="burgerInput" />
+            <button class="btn btn-primary px-3 ml-1" type="submit">Add</button>
+        </div>
+    </form>
