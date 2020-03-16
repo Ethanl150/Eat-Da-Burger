@@ -4,6 +4,6 @@ In this repository I created a full-stack web application from scratch that allo
 
 This application was built using the Model-View-Controller model (MVC), and was deployed to Heroku using JawsDB.
 
-[Here is a link to the application.](https://shrouded-springs-57416.herokuapp.com/)
+[Here is a link to the application.](https://frozen-depths-86840.herokuapp.com/)
 
 ![Eat-Da-Burger](eatdaburger.png)
