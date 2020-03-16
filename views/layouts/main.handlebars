@@ -8,54 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
-    {{!-- <link rel="stylesheets" type="text/css" href="/css/burger_style.css" /> --}}
-
-    <style type="text/css">
-    
-        body {
-            background: url("https://cdn.dribbble.com/users/651763/screenshots/4687856/burgerpattern.jpg") no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Fjalla One', sans-serif;
-            color: gainsboro;
-            text-shadow: 2px 2px purple;
-            font-size: 2rem;
-        }
-
-        header h1 {
-            font-size: 5rem;
-            text-decoration: none;
-        }
-
-        h1 {
-            font-size: 3rem;
-            text-decoration: underline;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            width: max-content;
-            margin: auto;
-            color: white;
-        }
-
-        .notDevoured li:hover {
-            color: lightgray;
-            cursor: pointer;
-        }
-
-        .devoured li {
-            color: gray;
-        }
-
-        input,
-        button {
-            border-radius: 0.3rem;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/burger_style.css" />
 </head>
 
 <body>
@@ -63,39 +16,8 @@
     {{{body}}}
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    {{!-- <script type="text/javascript" src="/js/burger.js"></script> --}}
-    <script type="text/javascript">
+    <script type="text/javascript" src="js/burger.js"></script>
 
-        $(function () {
-            $(".notDevoured li").on("click", function (event) {
-                event.preventDefault();
-                let id = $(this).data("id");
-                let devouredBurger = {
-                    id: id
-                }
-                $.ajax("/api/burgers/" + id, {
-                    type: "PUT",
-                    data: devouredBurger
-                }).then(function () {
-                    location.reload();
-                })
-            })
-
-            $("#addBurger").on("submit", function (event) {
-                event.preventDefault();
-                let input = $("input").val();
-                let newBurger = {
-                    name: input
-                }
-                $.ajax("api/burgers", {
-                    type: "POST",
-                    data: newBurger
-                }).then(function () {
-                    location.reload();
-                })
-            })
-        })
-    </script>
 </body>
 
 </html>
